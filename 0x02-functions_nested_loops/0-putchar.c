@@ -1,2 +1,1 @@
-#!/bin/bash
-_putchar.c
+gcc -Wall _putchar.c -o putchar
