@@ -4,7 +4,7 @@
  * _atoi - converts a string to an integer
  * @s: string to convert
  *
- * Return : value of integer
+ * Return: value of integer
  */
 int _atoi(char *s)
 {
@@ -14,7 +14,7 @@ int _atoi(char *s)
 	m = 1;
 	while ((*(s + i) < '0' || *(s + i) > '9') && (*(s + i) != '\0'))
 	{
-		if(*(s + i) == '-')
+		if (*(s + i) == '-')
 			m *= -1;
 		i++;
 	}
