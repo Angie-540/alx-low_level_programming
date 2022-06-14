@@ -1,23 +1,12 @@
-#include <stdio.h>
+#include "main.h"
 void puts2(char *str)
 {
-	int len=0;
-	int l = 0;
-	char *y = str;
-	int z;
+	int i = 0;
 
-	while (*y != '\0')
-	{
-		y++;
-		len++;
-	}
-	l = len - 1;
-	for (z = 0 ; z <= 1 ; z++)
-	{
-		if(z % 2 == 0)
-		{
-			_putchar(str[z]);
-		}
+	while (*(str + i))
+	{ 
+		_putchar(*(str + i));
+		i = i + 2;
 	}
 	_putchar('\n');
 }
