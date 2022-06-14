@@ -1,10 +1,13 @@
-#include <stdio.h>
+#include "main.h"
 
-int _strcmp(char *s1, char *s2)
+void _puts(char *str)
 {
 	int i = 0;
 
-	while (*(s1 + i) && *(s2 + i) && (*(s1 + i) == *(s2 + i)))
+	while (*(str + i))
+	{
+		_putchar(*(str + i));
 		i++;
-	return (*(s1 + i) - *(s2 + i));
+	}
+	_putchar('\n');
 }
