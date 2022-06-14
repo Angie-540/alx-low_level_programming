@@ -1,12 +1,15 @@
 #include <stdio.h>
-void print_rev(char *s)
-{int len;
-	for (len = 0; s[len] != '\0'; len++)
+void reverse_array(int *a, int n)
+{
+	int i = 0, t;
+
+	n = n - 1;
+	while (i < n)
 	{
+		t = *(a + i);
+		*(a + i) = *(a + n);
+		*(a + n) = t;
+		i++;
+		n--;
 	}
-	for (len = len -1; len >= 0; len--)
-	{
-		_putchar(s[len]);
-	}
-	_putchar('\n');
 }
