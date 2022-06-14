@@ -1,12 +1,10 @@
 #include <stdio.h>
-#include <unistd.h>
-void _puts(char *str)
+
+int _strcmp(char *s1, char *s2)
 {
-int l = 0;
-while (*(str + l) != '\0')
-{
-_putchar(str[l]);
-l++;
-}
-_putchar('\n);
+	int i = 0;
+
+	while (*(s1 + i) && *(s2 + i) && (*(s1 + i) == *(s2 + i)))
+		i++;
+	return (*(s1 + i) - *(s2 + i));
 }
