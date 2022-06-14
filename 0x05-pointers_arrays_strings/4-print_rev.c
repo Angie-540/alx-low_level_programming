@@ -1,15 +1,15 @@
-#include <stdio.h>
-void reverse_array(int *a, int n)
+#include "main.h"
+void print_rev(char *s)
 {
-	int i = 0, t;
+	int i = 0;
 
-	n = n - 1;
-	while (i < n)
-	{
-		t = *(a + i);
-		*(a + i) = *(a + n);
-		*(a + n) = t;
+	while (*(s + i))
 		i++;
-		n--;
+	i = i - 1;
+	while ( i >= 0)
+	{ 
+		_putchar(*(s + i));
+		i--;
 	}
+	_putchar('\n');
 }
