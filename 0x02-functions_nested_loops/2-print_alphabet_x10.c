@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * pring_alphabet_x10 - entry point
+ * print_alphabet_x10 - entry point
  *
  * Description: Prints the alphabet with _putchar ten times
  *
