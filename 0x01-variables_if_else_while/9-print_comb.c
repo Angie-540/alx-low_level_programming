@@ -5,7 +5,7 @@
 /* betty style doc for function main goes there */
 /**
  * main -Entry point
- * 
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -13,7 +13,7 @@ int main(void)
 	int i;
 
 	i = 48;
-	while ( i < 58)
+	while (i < 58)
 	{
 		putchar(i);
 		if (i != 57)
@@ -31,4 +31,3 @@ int main(void)
 
 	return (0);
 }
-	
