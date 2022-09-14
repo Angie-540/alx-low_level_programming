@@ -1,24 +1,22 @@
 #include "main.h"
 
 /**
- * main - entry point
- *
- * Description: prints _putchar with _putchar
+ * main - a program that prints _putchar
  *
  * Return: always 0
  */
 
 int main(void)
 {
-	int i = 0;
-	char c;
-	char s[] = "_putchar\n";
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 
-	while (i <= 9)
-	{
-		c = s[i];
-		_putchar(c);
-		i++;
-	}
 	return (0);
 }
