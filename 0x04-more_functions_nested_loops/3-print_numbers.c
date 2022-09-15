@@ -18,6 +18,3 @@ void print_numbers(void)
 	}
 	putchar(10);
 }
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
