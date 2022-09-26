@@ -20,6 +20,3 @@ char *_memset(char *s, char b, unsigned int n)
 
 	return (s);
 }
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
