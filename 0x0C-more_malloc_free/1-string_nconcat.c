@@ -1,18 +1,16 @@
-#include <stdlib.h>
 #include "main.h"
-
+#include <stdlib.h>
 
 /**
- *string_nconcat - concatenates two strings
- *@s1: destination string
- *@s2: source string
- *@n: no of bytes from source string to be concatenated
+ * *string_nconcat - concatenates two strings
+ * @s1: destination string
+ * @s2: source string
+ * @n: no of bytes from source string to be concatenated
  *
- *Return: pointer to newly allocated space containing s1, Null if fails
+ * Return: pointer to newly allocated space containing s1, Null if fails
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
-
 {
 	char *s;
 	unsigned int i, j, k, length, length2;
