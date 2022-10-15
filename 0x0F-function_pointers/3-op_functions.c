@@ -1,78 +1,46 @@
 #include "3-calc.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
- * op_add - adds a and b
- * @a: first number
- * @b: second number
+ * main - program that perfroms simple operations
+ * @argc: number of arguments
+ * @argv: array of arguments
  *
- * Return: sum of a and b
+ * Return: Always 0 (Success)
  */
-
-int op_add(int a, int b)
+int main(int argc, char *argv[])
 {
-	return (a + b);
-}
+	int arg1, arg2, result;
+	char o;
+	int (*func)(int, int);
 
-/**
- * op_sub - subtracts b from a
- * @a: first number
- * @b: second number
- *
- * Return: difference of a and b
- */
+	if (argc != 4)
+	{
+		printf("Error\n");
+		exit(98);
+	}
 
-int op_sub(int a, int b)
-{
-	return (a - b);
-}
+	arg1 = atoi(argv[1]);
+	arg2 = atoi(argv[3]);
 
-/**
- * op_mul - multiplies a and b
- * @a: first number
- * @b: second number
- *
- * Return: multiplication of a and b
- */
+	func = get_op_func(argv[2]);
 
-int op_mul(int a, int b)
-{
-	return (a * b);
-}
+	if (!func)
+	{
+		printf("Error\n");
+		exit(99);
+	}
 
-/**
- * op_div - divides a by b
- * @a: first number
- * @b: second number
- *
- * Return: integer division of a by b
- */
+	o = *argv[2];
 
-int op_div(int a, int b)
-{
-	if (b == 0)
+	if ((o == '/' || o == '%') && arg2 == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	return (a / b);
-}
 
-/**
- * op_mod - find the remainder of the division of a by b
- * @a: first number
- * @b: second number
- *
- * Return: remainder of the division of a by b
- */
+	result = func(arg1, arg2);
 
-int op_mod(int a, int b)
-{
-	if (b == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
-	return (a % b);
+	printf("%d\n", result);
+
+	return (0);
 }
